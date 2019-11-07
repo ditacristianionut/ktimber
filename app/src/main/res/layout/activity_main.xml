@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_title_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="LOG INFO"
+            android:textStyle="bold|italic"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <LinearLayout
+            android:id="@+id/btns_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="3"
+            app:layout_constraintTop_toBottomOf="@+id/tv_title_info"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent" >
+
+            <Button
+                android:id="@+id/btn_logs_i_m"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="msg"
+                android:layout_weight="1"/>
+
+            <Button
+                android:id="@+id/btn_logs_i_t_m"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="error + msg"
+                android:layout_weight="1"/>
+
+            <Button
+                android:id="@+id/btn_logs_i_t"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="error"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_title_debug"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="LOG DEBUG"
+            android:textStyle="bold|italic"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btns_info"/>
+
+        <LinearLayout
+            android:id="@+id/btns_debug"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="3"
+            app:layout_constraintTop_toBottomOf="@+id/tv_title_debug"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent" >
+
+            <Button
+                android:id="@+id/btn_logs_d_m"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="msg"
+                android:layout_weight="1"/>
+
+            <Button
+                android:id="@+id/btn_logs_d_t_m"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="error + msg"
+                android:layout_weight="1"/>
+
+            <Button
+                android:id="@+id/btn_logs_d_t"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="error"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_title_warn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="LOG WARN"
+            android:textStyle="bold|italic"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btns_debug"/>
+
+        <LinearLayout
+            android:id="@+id/btns_warn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="3"
+            app:layout_constraintTop_toBottomOf="@+id/tv_title_warn"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent" >
+
+            <Button
+                android:id="@+id/btn_logs_w_m"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="msg"
+                android:layout_weight="1"/>
+
+            <Button
+                android:id="@+id/btn_logs_w_t_m"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="error + msg"
+                android:layout_weight="1"/>
+
+            <Button
+                android:id="@+id/btn_logs_w_t"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="error"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_title_assert"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="LOG ASSERT"
+            android:textStyle="bold|italic"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btns_warn"/>
+
+        <LinearLayout
+            android:id="@+id/btns_assert"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="3"
+            app:layout_constraintTop_toBottomOf="@+id/tv_title_assert"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent" >
+
+            <Button
+                android:id="@+id/btn_logs_a_m"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="msg"
+                android:layout_weight="1"/>
+
+            <Button
+                android:id="@+id/btn_logs_a_t_m"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="error + msg"
+                android:layout_weight="1"/>
+
+            <Button
+                android:id="@+id/btn_logs_a_t"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="error"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_title_verbose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="LOG VERBOSE"
+            android:textStyle="bold|italic"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btns_assert"/>
+
+        <LinearLayout
+            android:id="@+id/btns_verbose"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="3"
+            app:layout_constraintTop_toBottomOf="@+id/tv_title_verbose"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent" >
+
+            <Button
+                android:id="@+id/btn_logs_v_m"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="msg"
+                android:layout_weight="1"/>
+
+            <Button
+                android:id="@+id/btn_logs_v_t_m"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="error + msg"
+                android:layout_weight="1"/>
+
+            <Button
+                android:id="@+id/btn_logs_v_t"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="error"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_title_error"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="LOG ERROR"
+            android:textStyle="bold|italic"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btns_verbose"/>
+
+        <LinearLayout
+            android:id="@+id/btns_error"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="3"
+            app:layout_constraintTop_toBottomOf="@+id/tv_title_error"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent" >
+
+            <Button
+                android:id="@+id/btn_logs_e_m"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="msg"
+                android:layout_weight="1"/>
+
+            <Button
+                android:id="@+id/btn_logs_e_t_m"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="error + msg"
+                android:layout_weight="1"/>
+
+            <Button
+                android:id="@+id/btn_logs_e_t"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="error"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="3"
+            android:layout_marginTop="24dp"
+            app:layout_constraintTop_toBottomOf="@+id/btns_error"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent" >
+
+            <Button
+                android:id="@+id/btn_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="View logs file"/>
+
+            <Button
+                android:id="@+id/btn_send"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Share logs file"/>
+
+            <Button
+                android:id="@+id/btn_delete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Delete file"/>
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
