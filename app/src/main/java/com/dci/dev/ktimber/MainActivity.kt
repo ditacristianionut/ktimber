@@ -108,15 +108,15 @@ class MainActivity : AppCompatActivity() {
 
         // region functional buttons
         btn_send.setOnClickListener {
-            sendLogsViaEmail(applicationContext, "dita.cristian.ionut@gmail.com")
+            shareLogsFile("dita.cristian.ionut@gmail.com")
         }
 
         btn_view.setOnClickListener {
-            openLogsFile(applicationContext)
+            openLogsFile()
         }
 
         btn_delete.setOnClickListener {
-            deleteLogsFile(applicationContext)
+            deleteLogsFile()
         }
         // endregion
 

@@ -1,13 +1,18 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.dci.dev.ktimber"
     android:versionCode="1"
-    android:versionName="1.0">
-    
-<!--    <application>-->
-<!--        <provider-->
-<!--            android:name="com.dci.dev"-->
-<!--            android:authorities="${applicationId}.provider"-->
-<!--            android:exported="false" />-->
-<!--    </application>-->
+    android:versionName="0.2">
+
+    <application>
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.com.dci.dev.ktimber"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_provider_paths"/>
+        </provider>
+    </application>
 
 </manifest>

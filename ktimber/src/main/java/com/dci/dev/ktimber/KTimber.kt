@@ -1,6 +1,7 @@
 package com.dci.dev.ktimber
 
 import android.content.Context
+import android.util.Log
 import timber.log.Timber
 
 object KTimber {
@@ -20,7 +21,7 @@ object KTimber {
         }
     }
 
-    fun start(context: Context, minimumDebugLevel: Int) {
+    fun start(context: Context, minimumDebugLevel: Int = Log.DEBUG) {
         tree = if (BuildConfig.DEBUG) {
             DebugLogTree()
         } else {

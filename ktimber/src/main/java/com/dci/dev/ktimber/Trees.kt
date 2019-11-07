@@ -1,7 +1,6 @@
 package com.dci.dev.ktimber
 
 import android.annotation.SuppressLint
-import android.content.Context
 import android.os.Build
 import android.util.Log
 import timber.log.Timber
@@ -24,7 +23,7 @@ class DebugLogTree : Timber.DebugTree() {
 
     override fun createStackElementTag(element: StackTraceElement): String? {
         // Add log statements line number to the log
-        return super.createStackElementTag(element) + " - " + element.lineNumber
+        return super.createStackElementTag(element) + "@" + element.lineNumber
     }
 }
 
@@ -71,13 +70,13 @@ class ReleaseLogTree(private val minLogLevel: Int = Log.WARN) : Timber.Tree() {
 
     companion object {
 
-        private val MAX_LOG_LENGTH = 4000
+        private const val MAX_LOG_LENGTH = 4000
     }
 }
 
 class FileLoggingTree(private val file: File) : Timber.DebugTree() {
 
-    private val LOG_TAG = FileLoggingTree::class.java.simpleName
+    private val logTag = FileLoggingTree::class.java.simpleName
 
     override fun log(priority: Int, tag: String?, message: String, t: Throwable?) {
         try {
@@ -119,12 +118,12 @@ class FileLoggingTree(private val file: File) : Timber.DebugTree() {
             writer.flush()
             writer.close()
         } catch (e: Exception) {
-            Timber.e(LOG_TAG, "Error while logging into file : $e")
+            Timber.e(logTag, "Error while logging into file : $e")
         }
     }
 
     override fun createStackElementTag(element: StackTraceElement): String? {
         // Add log statements line number to the log
-        return super.createStackElementTag(element) + " - " + element.lineNumber
+        return super.createStackElementTag(element) + "@" + element.lineNumber
     }
 }
