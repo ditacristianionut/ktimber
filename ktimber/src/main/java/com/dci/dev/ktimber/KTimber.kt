@@ -35,7 +35,6 @@ object KTimber {
 
     internal fun isInitialised(): Boolean {
         if (tree == null) {
-            Timber.tag(this::class.java.simpleName)
             Timber.plant(DebugLogTree())
         }
         return tree != null

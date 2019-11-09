@@ -76,7 +76,7 @@ class ReleaseLogTree(private val minLogLevel: Int = Log.WARN) : Timber.Tree() {
 
 class FileLoggingTree(private val file: File) : Timber.DebugTree() {
 
-    private val logTag = FileLoggingTree::class.java.simpleName
+    private val logTag = "FileLoggingTree"
 
     override fun log(priority: Int, tag: String?, message: String, t: Throwable?) {
         try {
