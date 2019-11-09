@@ -35,7 +35,7 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
     implementation project(path: ':ktimber')
 
-    implementation 'com.github.ditacristianionut:ktimber:0.7'
+    implementation 'com.github.ditacristianionut:ktimber:0.8'
 
 //    implementation 'com.github.ditacristianionut:ktimber:v0.1'
 }

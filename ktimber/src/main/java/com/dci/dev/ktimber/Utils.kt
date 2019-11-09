@@ -15,10 +15,11 @@ import timber.log.Timber
 import java.io.File
 import java.io.FileNotFoundException
 
-
+@Keep
 internal fun fileName(context: Context) = context.appName() + ".html"
 
 /*  Helper method to create file*/
+@Keep
 internal fun generateFile(context: Context): File? {
     var file: File? = null
     val root = context.filesDir

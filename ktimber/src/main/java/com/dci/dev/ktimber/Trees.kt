@@ -3,12 +3,14 @@ package com.dci.dev.ktimber
 import android.annotation.SuppressLint
 import android.os.Build
 import android.util.Log
+import androidx.annotation.Keep
 import timber.log.Timber
 import java.io.File
 import java.io.FileWriter
 import java.text.SimpleDateFormat
 import java.util.*
 
+@Keep
 class DebugLogTree : Timber.DebugTree() {
     override fun log(priority: Int, tag: String?, message: String, t: Throwable?) {
         var priority = priority
@@ -27,6 +29,7 @@ class DebugLogTree : Timber.DebugTree() {
     }
 }
 
+@Keep
 class ReleaseLogTree(private val minLogLevel: Int = Log.WARN) : Timber.Tree() {
 
     override fun isLoggable(tag: String?, priority: Int): Boolean {
@@ -74,6 +77,7 @@ class ReleaseLogTree(private val minLogLevel: Int = Log.WARN) : Timber.Tree() {
     }
 }
 
+@Keep
 class FileLoggingTree(private val file: File) : Timber.DebugTree() {
 
     private val logTag = "FileLoggingTree"
