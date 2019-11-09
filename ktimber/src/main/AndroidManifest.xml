@@ -7,7 +7,7 @@
         <provider
             android:name="androidx.core.content.FileProvider"
             android:authorities="${applicationId}.com.dci.dev.ktimber"
-            android:exported="true"
+            android:exported="false"
             android:grantUriPermissions="true">
             <meta-data
                 android:name="android.support.FILE_PROVIDER_PATHS"
