@@ -7,13 +7,13 @@ import android.content.pm.PackageManager
 import android.net.Uri
 import android.os.Environment
 import android.widget.Toast
+import androidx.annotation.Keep
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ShareCompat
 import androidx.core.content.FileProvider
 import timber.log.Timber
 import java.io.File
 import java.io.FileNotFoundException
-
 
 
 internal fun fileName(context: Context) = context.appName() + ".html"
@@ -32,7 +32,7 @@ internal fun generateFile(context: Context): File? {
     return file
 }
 
-
+@Keep
 fun shareLogsFile(activity: AppCompatActivity, emailAddress: String) {
     val context = activity.applicationContext
     try {
@@ -60,6 +60,7 @@ fun shareLogsFile(activity: AppCompatActivity, emailAddress: String) {
     }
 }
 
+@Keep
 fun deleteLogsFile(context: Context) {
     try {
         val root = context.filesDir
@@ -71,6 +72,7 @@ fun deleteLogsFile(context: Context) {
     }
 }
 
+@Keep
 fun openLogsFile(context: Context) {
     try {
         val root = context.filesDir

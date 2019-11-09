@@ -2,8 +2,10 @@ package com.dci.dev.ktimber
 
 import android.content.Context
 import android.util.Log
+import androidx.annotation.Keep
 import timber.log.Timber
 
+@Keep
 object KTimber {
 
     private var tree: Timber.Tree? = null
@@ -48,6 +50,7 @@ object KTimber {
 
 // region LEVEL ASSERT
 /** Log an assert message. **/
+@Keep
 fun logAssert(message: String) {
     if (KTimber.isInitialised()) {
         Timber.wtf(message)
@@ -57,6 +60,7 @@ fun logAssert(message: String) {
 }
 
 /** Log an assert exception and a message.  */
+@Keep
 fun logAssert(t: Throwable, message: String) {
     if (KTimber.isInitialised()) {
         Timber.wtf(t, message)
@@ -66,6 +70,7 @@ fun logAssert(t: Throwable, message: String) {
 }
 
 /** Log an assert exception.  */
+@Keep
 fun logAssert(t: Throwable) {
     if (KTimber.isInitialised()) {
         Timber.wtf(t)
@@ -77,6 +82,7 @@ fun logAssert(t: Throwable) {
 
 // region LEVEL ERROR
 /** Log an error message.  */
+@Keep
 fun logError(message: String) {
     if (KTimber.isInitialised()) {
         Timber.e(message)
@@ -86,6 +92,7 @@ fun logError(message: String) {
 }
 
 /** Log an error exception and a message.  */
+@Keep
 fun logError(t: Throwable, message: String) {
     if (KTimber.isInitialised()) {
         Timber.e(t, message)
@@ -95,6 +102,7 @@ fun logError(t: Throwable, message: String) {
 }
 
 /** Log an error exception.  */
+@Keep
 fun logError(t: Throwable) {
     if (KTimber.isInitialised()) {
         Timber.e(t)
@@ -106,6 +114,7 @@ fun logError(t: Throwable) {
 
 // region LEVEL WARNING
 /** Log a warning message.  */
+@Keep
 fun logWarn(message: String) {
     if (KTimber.isInitialised()) {
         Timber.w(message)
@@ -115,6 +124,7 @@ fun logWarn(message: String) {
 }
 
 /** Log a warning exception and a message.  */
+@Keep
 fun logWarn(t: Throwable, message: String) {
     if (KTimber.isInitialised()) {
         Timber.w(t, message)
@@ -124,6 +134,7 @@ fun logWarn(t: Throwable, message: String) {
 }
 
 /** Log a warning exception.  */
+@Keep
 fun logWarn(t: Throwable) {
     if (KTimber.isInitialised()) {
         Timber.w(t)
@@ -135,6 +146,7 @@ fun logWarn(t: Throwable) {
 
 // region LEVEL INFO
 /** Log a verbose message.  */
+@Keep
 fun logInfo(message: String) {
     if (KTimber.isInitialised()) {
         Timber.i(message)
@@ -144,6 +156,7 @@ fun logInfo(message: String) {
 }
 
 /** Log a verbose exception and a message.  */
+@Keep
 fun logInfo(t: Throwable,message: String) {
     if (KTimber.isInitialised()) {
         Timber.i(t, message)
@@ -153,6 +166,7 @@ fun logInfo(t: Throwable,message: String) {
 }
 
 /** Log a verbose exception.  */
+@Keep
 fun logInfo(t: Throwable) {
     if (KTimber.isInitialised()) {
         Timber.i(t)
@@ -164,6 +178,7 @@ fun logInfo(t: Throwable) {
 
 // region LEVEL DEBUG
 /** Log a debug message.  */
+@Keep
 fun logDebug(message: String) {
     if (KTimber.isInitialised()) {
         Timber.d(message)
@@ -173,6 +188,7 @@ fun logDebug(message: String) {
 }
 
 /** Log a debug exception and a message.  */
+@Keep
 fun logDebug(t: Throwable, message: String) {
     if (KTimber.isInitialised()) {
         Timber.d(t, message)
@@ -182,6 +198,7 @@ fun logDebug(t: Throwable, message: String) {
 }
 
 /** Log a debug exception.  */
+@Keep
 fun logDebug(t: Throwable) {
     if (KTimber.isInitialised()) {
         Timber.d(t)
@@ -193,6 +210,7 @@ fun logDebug(t: Throwable) {
 
 // region LEVEL VERBOSE
 /** Log a verbose message.  */
+@Keep
 fun logVerbose(message: String) {
     if (KTimber.isInitialised()) {
         Timber.v(message)
@@ -202,6 +220,7 @@ fun logVerbose(message: String) {
 }
 
 /** Log a verbose exception and a message.  */
+@Keep
 fun logVerbose(t: Throwable, message: String) {
     if (KTimber.isInitialised()) {
         Timber.v(t, message)
@@ -211,6 +230,7 @@ fun logVerbose(t: Throwable, message: String) {
 }
 
 /** Log a verbose exception.  */
+@Keep
 fun logVerbose(t: Throwable) {
     if (KTimber.isInitialised()) {
         Timber.v(t)
