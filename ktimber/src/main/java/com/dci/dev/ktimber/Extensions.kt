@@ -1,10 +1,10 @@
 package com.dci.dev.ktimber
 
+import android.app.Activity
 import android.content.Context
 import android.content.pm.ApplicationInfo
 import android.content.pm.PackageManager
 import androidx.annotation.Keep
-import androidx.appcompat.app.AppCompatActivity
 import timber.log.Timber
 
 // Extension function to get host application name
@@ -26,19 +26,19 @@ internal fun Context.appName(): String {
 
 // Extension function to share logs file
 @Keep
-fun AppCompatActivity.shareLogsFile(emailAddress: String) {
+fun Activity.shareLogsFile(emailAddress: String) {
     shareLogsFile(this, emailAddress)
 }
 
 // Extension function to share logs file
 @Keep
-fun AppCompatActivity.openLogsFile() {
+fun Activity.openLogsFile() {
     openLogsFile(this)
 }
 
 // Extension function to delete logs file
 @Keep
-fun AppCompatActivity.deleteLogsFile() {
+fun Activity.deleteLogsFile() {
     deleteLogsFile(this)
 }
 

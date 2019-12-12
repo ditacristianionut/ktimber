@@ -10,6 +10,7 @@ object KTimber {
 
     private var tree: Timber.Tree? = null
 
+    @JvmStatic
     fun startWithFileLogger(context: Context) {
         val file = generateFile(context)
         if (file != null) {
@@ -23,6 +24,7 @@ object KTimber {
         }
     }
 
+    @JvmStatic
     fun start(context: Context, minimumDebugLevel: Int = Log.DEBUG) {
         tree = if (BuildConfig.DEBUG) {
             DebugLogTree()

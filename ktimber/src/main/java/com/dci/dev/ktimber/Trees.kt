@@ -122,7 +122,7 @@ class FileLoggingTree(private val file: File) : Timber.DebugTree() {
             writer.flush()
             writer.close()
         } catch (e: Exception) {
-            Timber.e(logTag, "Error while logging into file : $e")
+            Timber.e("Error while logging into file : $e")
         }
     }
 

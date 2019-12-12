@@ -1,17 +1,12 @@
 package com.dci.dev.ktimber
 
+import android.app.Activity
 import android.content.Context
 import android.content.Intent
-import android.content.pm.ApplicationInfo
-import android.content.pm.PackageManager
-import android.net.Uri
-import android.os.Environment
 import android.widget.Toast
 import androidx.annotation.Keep
-import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ShareCompat
 import androidx.core.content.FileProvider
-import timber.log.Timber
 import java.io.File
 import java.io.FileNotFoundException
 
@@ -34,7 +29,7 @@ internal fun generateFile(context: Context): File? {
 }
 
 @Keep
-fun shareLogsFile(activity: AppCompatActivity, emailAddress: String) {
+fun shareLogsFile(activity: Activity, emailAddress: String) {
     val context = activity.applicationContext
     try {
         val root = context.filesDir
