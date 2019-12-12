@@ -5,6 +5,14 @@ apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 
 android {
+    signingConfigs {
+        release {
+            storeFile file('/Users/cristi/Desktop/android/projects/KTimber/app/release-key.keystore')
+            storePassword 'An@ar31mar'
+            keyAlias = 'key0'
+            keyPassword 'An@ar31mar'
+        }
+    }
     compileSdkVersion 29
     buildToolsVersion "29.0.0"
     defaultConfig {
@@ -35,7 +43,5 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
     implementation project(path: ':ktimber')
 
-    implementation 'com.github.ditacristianionut:ktimber:0.8'
-
-//    implementation 'com.github.ditacristianionut:ktimber:v0.1'
+//    implementation 'com.github.ditacristianionut:ktimber:0.10'
 }
