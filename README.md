@@ -34,7 +34,7 @@ To share/open/delete the logs file:
   - deleteLogsFile(context: Context)
   - openLogsFile(context: Context)
   
-Or you can usue the extensions:
+Or you can use the extensions:
   - AppCompatActivity.shareLogsFile(emailAddress: String)
   - AppCompatActivity.deleteLogsFile()
   - AppCompatActivity.openLogsFile()
